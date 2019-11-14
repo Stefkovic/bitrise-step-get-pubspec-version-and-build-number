@@ -2,13 +2,13 @@
 set -ex
 # set -o pipefail
 
-if [[ ! -f $PUBSPEC_PATH ]]
+if [[ ! -f $pubspec_path ]]
 then
-	echo "No pubspec file found at path: ${PUBSPEC_PATH}"
+	echo "No pubspec file found at path: ${pubspec_path}"
 	exit 1
 fi
 
-VERSION=`yq read "${PUBSPEC_PATH}" version`
+VERSION=`yq read "${pubspec_path}" version`
 
 IFS='+'
 read -a split <<< "${VERSION}"
