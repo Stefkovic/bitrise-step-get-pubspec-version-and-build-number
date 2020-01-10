@@ -2,13 +2,15 @@
 set -ex
 # set -o pipefail
 
+GO111MODULE=on go get -v github.com/mikefarah/yq/v2
+
 if [[ ! -f $pubspec_path ]]
 then
 	echo "No pubspec file found at path: ${pubspec_path}"
 	exit 1
 fi
 
-VERSION=`yq read "${pubspec_path}" version`
+VERSION=`$GOPATH/bin/yq read "${pubspec_path}" version`
 
 IFS='+'
 read -a split <<< "${VERSION}"

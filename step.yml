@@ -45,9 +45,10 @@ run_if: ""
 
 deps:
   brew:
-    - name: yq
+    - name: go
   apt_get:
-    - name: yq
+    - name: golang
+      bin_name: go
 
 toolkit:
   bash:
