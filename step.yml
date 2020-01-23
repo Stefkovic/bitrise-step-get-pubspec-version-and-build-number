@@ -44,12 +44,6 @@ is_skippable: false
 run_if: ""
 
 deps:
-  brew:
-    - name: go
-  apt_get:
-    - name: golang
-      bin_name: go
-
 toolkit:
   bash:
     entry_file: step.sh

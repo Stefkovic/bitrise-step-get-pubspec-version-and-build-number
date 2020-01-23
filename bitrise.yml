@@ -5,7 +5,7 @@ app:
   envs:
     # If you want to share this step into a StepLib
     - BITRISE_STEP_ID: get-pubspec-version-and-build-number
-    - BITRISE_STEP_VERSION: "1.0.1"
+    - BITRISE_STEP_VERSION: "1.0.3"
     - BITRISE_STEP_GIT_CLONE_URL: https://github.com/ianko/bitrise-step-get-pubspec-version-and-build-number.git
     - MY_STEPLIB_REPO_FORK_GIT_URL: $MY_STEPLIB_REPO_FORK_GIT_URL
 
